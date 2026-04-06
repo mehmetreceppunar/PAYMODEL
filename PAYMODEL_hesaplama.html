@@ -8,6 +8,7 @@
   <meta property="og:title" content="PAYMODEL — İnşaat Maliyet Hesaplama">
   <meta property="og:description" content="Arsa + inşaat maliyetinizi saniyeler içinde hesaplayın. MESS YAPI GRUBU.">
   <meta property="og:image" content="https://i.imgur.com/b9WMTHb.png">
+  <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1335">
   <meta property="og:image:height" content="750">
   <meta property="og:type" content="website">
@@ -18,50 +19,44 @@
   <meta name="twitter:image" content="https://i.imgur.com/b9WMTHb.png">
 </head>
 <body>
-
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-.wrap{padding:1rem 0;max-width:900px}
-h1{font-size:20px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px}
-.sub{font-size:13px;color:var(--color-text-secondary);margin-bottom:1rem}
-.resmi{display:inline-flex;align-items:center;gap:6px;background:var(--color-background-info);color:var(--color-text-info);font-size:11px;padding:4px 10px;border-radius:var(--border-radius-md);margin-bottom:1.25rem}
-.section{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1rem 1.25rem;margin-bottom:1rem}
-.section-title{font-size:12px;font-weight:500;color:var(--color-text-secondary);text-transform:uppercase;letter-spacing:.06em;margin-bottom:1rem}
+.wrap{padding:1rem;max-width:900px;margin:0 auto;font-family:sans-serif}
+h1{font-size:20px;font-weight:500;margin-bottom:4px}
+.sub{font-size:13px;color:#666;margin-bottom:1rem}
+.resmi{display:inline-flex;align-items:center;gap:6px;background:#e8f4fd;color:#1a5fa8;font-size:11px;padding:4px 10px;border-radius:8px;margin-bottom:1.25rem}
+.section{background:#fff;border:0.5px solid #e2e8f0;border-radius:12px;padding:1rem 1.25rem;margin-bottom:1rem}
+.section-title{font-size:12px;font-weight:500;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:1rem}
 .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
 .grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
 .field{display:flex;flex-direction:column;gap:4px}
-.field label{font-size:12px;color:var(--color-text-secondary)}
-.field input,.field select{width:100%;padding:8px 10px;font-size:13px;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);background:var(--color-background-secondary);color:var(--color-text-primary)}
+.field label{font-size:12px;color:#64748b}
+.field input,.field select{width:100%;padding:8px 10px;font-size:13px;border:0.5px solid #cbd5e1;border-radius:8px;background:#f8fafc;color:#1e293b}
 .emsal-satir{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:12px}
 .auto-box{display:flex;flex-direction:column;gap:4px}
-.auto-box label{font-size:12px;color:var(--color-text-secondary)}
-.auto-val{background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:8px 12px;display:flex;align-items:center;justify-content:space-between;min-height:38px}
-.auto-val .av{font-size:15px;font-weight:500;color:var(--color-text-primary)}
-.auto-val .at{font-size:10px;color:var(--color-text-tertiary)}
-.emsal-sonuc{display:flex;align-items:center;justify-content:space-between;background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:8px 12px}
-.emsal-sonuc .es-lbl{font-size:12px;color:var(--color-text-secondary)}
-.emsal-sonuc .es-val{font-size:18px;font-weight:500;color:var(--color-text-primary)}
-.daire-sonuc{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;padding:12px 14px;background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md)}
-.ds-item .ds-lbl{font-size:11px;color:var(--color-text-secondary);margin-bottom:3px}
-.ds-item .ds-val{font-size:17px;font-weight:500;color:var(--color-text-primary)}
-.ds-item .ds-sub{font-size:11px;color:var(--color-text-tertiary);margin-top:2px}
+.auto-box label{font-size:12px;color:#64748b}
+.auto-val{background:#f8fafc;border:0.5px solid #e2e8f0;border-radius:8px;padding:8px 12px;display:flex;align-items:center;justify-content:space-between;min-height:38px}
+.auto-val .av{font-size:15px;font-weight:500;color:#1e293b}
+.auto-val .at{font-size:10px;color:#94a3b8}
+.emsal-sonuc{display:flex;align-items:center;justify-content:space-between;background:#f8fafc;border:0.5px solid #e2e8f0;border-radius:8px;padding:8px 12px}
+.emsal-sonuc .es-lbl{font-size:12px;color:#64748b}
+.emsal-sonuc .es-val{font-size:18px;font-weight:500;color:#1e293b}
 .sabit-satir{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
-.sabit-pill{display:inline-flex;align-items:center;gap:6px;background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:20px;padding:5px 12px;font-size:12px;color:var(--color-text-secondary)}
-.sabit-pill strong{color:var(--color-text-primary);font-weight:500}
-.birim-panel{background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:12px 16px;margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.birim-panel .bp-sol .bl{font-size:13px;font-weight:500;color:var(--color-text-primary)}
-.birim-panel .bp-sol .bs{font-size:11px;color:var(--color-text-secondary);margin-top:3px;line-height:1.5}
-.birim-panel .bp-sag{text-align:right;flex-shrink:0}
-.birim-panel .bp-sag .bv{font-size:24px;font-weight:500;color:var(--color-text-primary)}
-.birim-panel .bp-sag .bk{font-size:11px;color:var(--color-text-tertiary);margin-top:2px}
-.metric{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:12px 14px}
-.metric .ml{font-size:11px;color:var(--color-text-secondary);margin-bottom:4px}
-.metric .mv{font-size:20px;font-weight:500;color:var(--color-text-primary)}
+.sabit-pill{display:inline-flex;align-items:center;gap:6px;background:#f8fafc;border:0.5px solid #e2e8f0;border-radius:20px;padding:5px 12px;font-size:12px;color:#64748b}
+.sabit-pill strong{color:#1e293b;font-weight:500}
+.birim-panel{background:#f8fafc;border:0.5px solid #e2e8f0;border-radius:8px;padding:12px 16px;margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.birim-panel .bl{font-size:13px;font-weight:500;color:#1e293b}
+.birim-panel .bs{font-size:11px;color:#64748b;margin-top:3px;line-height:1.5}
+.birim-panel .bv{font-size:24px;font-weight:500;color:#1e293b;text-align:right}
+.birim-panel .bk{font-size:11px;color:#94a3b8;text-align:right;margin-top:2px}
+.metric{background:#f8fafc;border-radius:8px;padding:12px 14px}
+.metric .ml{font-size:11px;color:#64748b;margin-bottom:4px}
+.metric .mv{font-size:20px;font-weight:500;color:#1e293b}
 .metric .mv.gold{color:#9a7a10}
 .metric .mv.blue{color:#185fa5}
-.metric .ms{font-size:11px;color:var(--color-text-tertiary);margin-top:2px}
+.metric .ms{font-size:11px;color:#94a3b8;margin-top:2px}
 .dagitim{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
-.dk{border-radius:var(--border-radius-md);padding:14px;text-align:center}
+.dk{border-radius:8px;padding:14px;text-align:center}
 .dk .ds{font-size:32px;font-weight:500}
 .dk .de{font-size:12px;margin-top:3px;font-weight:500}
 .dk .da{font-size:11px;margin-top:4px;opacity:.75}
@@ -69,27 +64,25 @@ h1{font-size:20px;font-weight:500;color:var(--color-text-primary);margin-bottom:
 .dg{background:#0d9488;color:#e0faf7}
 .dy{background:#c9a84c;color:#2a1e00}
 .tablo{width:100%;border-collapse:collapse;font-size:13px}
-.tablo th{padding:8px 10px;border-bottom:0.5px solid var(--color-border-tertiary);color:var(--color-text-secondary);font-weight:500;text-align:left}
-.tablo td{padding:8px 10px;border-bottom:0.5px solid var(--color-border-tertiary);color:var(--color-text-primary)}
-.tablo tr:last-child td{border-bottom:none;font-weight:500;background:var(--color-background-secondary)}
+.tablo th{padding:8px 10px;border-bottom:0.5px solid #e2e8f0;color:#64748b;font-weight:500;text-align:left}
+.tablo td{padding:8px 10px;border-bottom:0.5px solid #e2e8f0;color:#1e293b}
+.tablo tr:last-child td{border-bottom:none;font-weight:500;background:#f8fafc}
 .tablo td.r{text-align:right}
 .bar-row{display:flex;align-items:center;gap:8px;margin-bottom:7px}
-.bar-lbl{font-size:12px;color:var(--color-text-secondary);width:80px;text-align:right;flex-shrink:0}
-.bar-track{flex:1;background:var(--color-background-secondary);border-radius:3px;height:26px;overflow:hidden}
+.bar-lbl{font-size:12px;color:#64748b;width:80px;text-align:right;flex-shrink:0}
+.bar-track{flex:1;background:#f1f5f9;border-radius:3px;height:26px;overflow:hidden}
 .bar-fill{height:100%;border-radius:3px;display:flex;align-items:center;padding-left:8px;font-size:11px;font-weight:500;color:white}
-.bar-val{font-size:12px;color:var(--color-text-primary);width:140px;flex-shrink:0;text-align:right}
-.dipnot{font-size:11px;color:var(--color-text-tertiary);margin-top:10px;font-style:italic;border-top:0.5px solid var(--color-border-tertiary);padding-top:8px}
+.bar-val{font-size:12px;color:#1e293b;width:140px;flex-shrink:0;text-align:right}
+.dipnot{font-size:11px;color:#94a3b8;margin-top:10px;font-style:italic;border-top:0.5px solid #e2e8f0;padding-top:8px}
 </style>
 
 <div class="wrap">
   <h1>PAYMODEL — Hesaplama Robotu</h1>
   <p class="sub">Proje bilgilerini girin, sistem otomatik hesaplasın</p>
   <div class="resmi">
-    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M4 6l1.5 1.5L8 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-    Birim maliyet: Çevre, Şehircilik ve İklim Değişikliği Bakanlığı — Resmî Gazete 33157, 3 Şubat 2026
+    &#10003; Birim maliyet: Çevre, Şehircilik ve İklim Değişikliği Bakanlığı — Resmî Gazete 33157, 3 Şubat 2026
   </div>
 
-  <!-- ARSA -->
   <div class="section">
     <div class="section-title">Arsa bilgileri</div>
     <div class="grid3">
@@ -113,23 +106,22 @@ h1{font-size:20px;font-weight:500;color:var(--color-text-primary);margin-bottom:
     </div>
   </div>
 
-  <!-- PROJE -->
   <div class="section">
     <div class="section-title">Proje parametreleri</div>
     <div class="grid3">
       <div class="field">
         <label>Toplam daire sayısı</label>
-        <input type="number" id="toplam_daire" value="24" step="1" min="5">
+        <input type="number" id="toplam_daire" value="24" step="1" min="4">
       </div>
       <div class="auto-box">
-        <label>Katılımcı sayısı <span style="font-size:10px;color:var(--color-text-tertiary)">(otomatik)</span></label>
+        <label>Katılımcı sayısı <span style="font-size:10px;color:#94a3b8">(otomatik)</span></label>
         <div class="auto-val">
           <span class="av" id="r_katilimci_auto">—</span>
           <span class="at">= mal sahibi daire</span>
         </div>
       </div>
       <div class="auto-box">
-        <label>Daire başı net m² <span style="font-size:10px;color:var(--color-text-tertiary)">(otomatik)</span></label>
+        <label>Daire başı net m² <span style="font-size:10px;color:#94a3b8">(otomatik)</span></label>
         <div class="auto-val">
           <span class="av" id="r_daire_em_auto">—</span>
           <span class="at">emsal ÷ daire</span>
@@ -151,29 +143,27 @@ h1{font-size:20px;font-weight:500;color:var(--color-text-primary);margin-bottom:
       </select>
     </div>
     <div class="birim-panel">
-      <div class="bp-sol">
+      <div>
         <div class="bl">Yapı yaklaşık birim maliyeti</div>
         <div class="bs">Mimarlık ve Mühendislik Hizmet Bedelleri Tebliği · KDV hariç · %15 genel gider + %10 yüklenici kârı dahil · Her yıl Bakanlık tarafından belirlenir</div>
       </div>
-      <div class="bp-sag">
+      <div>
         <div class="bv" id="birim_goster">21.050 TL/m²</div>
         <div class="bk">Resmî Gazete 33157</div>
       </div>
     </div>
   </div>
 
-  <!-- SABİT -->
   <div class="section">
     <div class="section-title">Sistem kaiideleri — sabit, değiştirilemez</div>
     <div class="sabit-satir">
       <div class="sabit-pill">&#9679; Kat karşılığı <strong>%50</strong></div>
-      <div class="sabit-pill">&#9679; Taahhüt bedeli <strong>4 daire</strong></div>
+      <div class="sabit-pill">&#9679; Taahhüt bedeli <strong>%8.3</strong></div>
       <div class="sabit-pill">&#9679; Harç ve başlangıç giderleri <strong>%10</strong></div>
       <div class="sabit-pill">&#9679; Yüklenici <strong>MESS YAPI iştirakı</strong></div>
     </div>
   </div>
 
-  <!-- ÖZET -->
   <div class="section">
     <div class="section-title">Arsa & inşaat özeti</div>
     <div class="grid4">
@@ -184,17 +174,15 @@ h1{font-size:20px;font-weight:500;color:var(--color-text-primary);margin-bottom:
     </div>
   </div>
 
-  <!-- DAİRE DAĞILIMI -->
   <div class="section">
     <div class="section-title">Daire dağılımı — toplam <span id="r_tdaire">—</span> daire</div>
     <div class="dagitim">
       <div class="dk dn"><div class="ds" id="d_ms">—</div><div class="de">Mal sahipleri</div><div class="da">Katılımcılara teslim</div></div>
       <div class="dk dg"><div class="ds" id="d_in">—</div><div class="de">İnşaat bedeli</div><div class="da">Müteahhit kat karşılığı (%50)</div></div>
-      <div class="dk dy"><div class="ds" id="d_taahhut">—</div><div class="de">Taahhüt bedeli</div><div class="da">Üstlenme & planlama</div></div>
+      <div class="dk dy"><div class="ds" id="d_ta">—</div><div class="de">Taahhüt bedeli</div><div class="da">Üstlenme & planlama (%8.3)</div></div>
     </div>
   </div>
 
-  <!-- GİRİŞ BEDELİ -->
   <div class="section">
     <div class="section-title">Katılımcı başı giriş bedeli</div>
     <div class="grid3">
@@ -204,7 +192,6 @@ h1{font-size:20px;font-weight:500;color:var(--color-text-primary);margin-bottom:
     </div>
   </div>
 
-  <!-- FİYAT AŞAMALARI -->
   <div class="section">
     <div class="section-title">Fiyat aşamaları</div>
     <table class="tablo">
@@ -219,7 +206,7 @@ h1{font-size:20px;font-weight:500;color:var(--color-text-primary);margin-bottom:
 <script>
 const fmt   = n => Math.round(n).toLocaleString('tr-TR');
 const fmtTL = n => fmt(n)+' TL';
-const SABİT = {KK:0.50, TAAHHUT_ORAN:0.1667, HARC:0.10};
+const SABİT = {KK:0.50, TAAHHUT_ORAN:0.0833, HARC:0.10};
 
 function hesapla(){
   const alan         = +document.getElementById('arsa_alan').value||0;
@@ -230,45 +217,36 @@ function hesapla(){
   const toplam_daire = +document.getElementById('toplam_daire').value||24;
   const birim        = parseInt(document.getElementById('yapi_sinifi').value)||21050;
 
-  // Otomatik hesaplananlar
+  document.getElementById('emsal_toplam').textContent = emsal.toFixed(2);
+  document.getElementById('birim_goster').textContent = fmt(birim)+' TL/m²';
+
   const emsal_alan = Math.round(alan * emsal);
   const taahhut    = Math.round(toplam_daire * SABİT.TAAHHUT_ORAN);
   const kalan      = toplam_daire - taahhut;
   const mal_sahibi = Math.round(kalan * (1 - SABİT.KK));
   const insaat     = kalan - mal_sahibi;
   const katilimci  = mal_sahibi;
-  const db_em      = toplam_daire > 0 ? (emsal_alan / toplam_daire) : 0;
+  const db_em      = toplam_daire > 0 ? emsal_alan/toplam_daire : 0;
   const uretim     = birim * db_em;
-
-  const arsa_pay   = katilimci > 0 ? fiyat / katilimci : 0;
+  const arsa_pay   = katilimci > 0 ? fiyat/katilimci : 0;
   const harc_bedel = arsa_pay * SABİT.HARC;
   const giris      = arsa_pay + harc_bedel;
 
-  // Proje parametreleri — otomatik gösterim
-  document.getElementById('emsal_toplam').textContent       = emsal.toFixed(2);
-  document.getElementById('r_katilimci_auto').textContent   = katilimci+' kişi';
-  document.getElementById('r_daire_em_auto').textContent    = db_em.toFixed(1)+' m²';
-  document.getElementById('birim_goster').textContent       = fmt(birim)+' TL/m²';
+  document.getElementById('r_katilimci_auto').textContent = katilimci+' kişi';
+  document.getElementById('r_daire_em_auto').textContent  = db_em.toFixed(1)+' m²';
+  document.getElementById('r_birim_arsa').textContent     = alan>0 ? fmt(fiyat/alan)+' TL/m²':'—';
+  document.getElementById('r_emsal_alan').textContent     = fmt(emsal_alan)+' m²';
+  document.getElementById('r_uretim').textContent         = fmtTL(uretim);
+  document.getElementById('r_arsa_pay_ozet').textContent  = fmtTL(arsa_pay);
+  document.getElementById('r_tdaire').textContent         = toplam_daire;
+  document.getElementById('d_ms').textContent             = mal_sahibi;
+  document.getElementById('d_in').textContent             = insaat;
+  document.getElementById('d_ta').textContent             = taahhut;
+  document.getElementById('r_apay').textContent           = fmtTL(arsa_pay);
+  document.getElementById('r_apay_s').textContent         = fmtTL(fiyat)+' ÷ '+katilimci;
+  document.getElementById('r_harc').textContent           = fmtTL(harc_bedel);
+  document.getElementById('r_giris').textContent          = fmtTL(giris);
 
-  // Özet
-  document.getElementById('r_birim_arsa').textContent    = alan>0 ? fmt(fiyat/alan)+' TL/m²':'—';
-  document.getElementById('r_emsal_alan').textContent    = fmt(emsal_alan)+' m²';
-  document.getElementById('r_uretim').textContent        = fmtTL(uretim);
-  document.getElementById('r_arsa_pay_ozet').textContent = fmtTL(arsa_pay);
-
-  // Dağılım
-  document.getElementById('r_tdaire').textContent = toplam_daire;
-  document.getElementById('d_ms').textContent     = mal_sahibi;
-  document.getElementById('d_in').textContent     = insaat;
-  document.getElementById('d_taahhut').textContent = taahhut;
-
-  // Giriş bedeli
-  document.getElementById('r_apay').textContent   = fmtTL(arsa_pay);
-  document.getElementById('r_apay_s').textContent = fmtTL(fiyat)+' ÷ '+katilimci;
-  document.getElementById('r_harc').textContent   = fmtTL(harc_bedel);
-  document.getElementById('r_giris').textContent  = fmtTL(giris);
-
-  // Fiyat aşamaları
   const asamalar=[
     {ad:'Başlangıç',oran:0.00},
     {ad:'Temel',    oran:0.15},
@@ -276,19 +254,19 @@ function hesapla(){
     {ad:'Tesisat',  oran:0.76},
     {ad:'Teslim',   oran:1.00},
   ];
-  const maxF  = giris + uretim;
-  const tbody = document.getElementById('r_tablo');
-  const bDiv  = document.getElementById('r_barlar');
+  const maxF=giris+uretim;
+  const tbody=document.getElementById('r_tablo');
+  const bDiv=document.getElementById('r_barlar');
   tbody.innerHTML=''; bDiv.innerHTML='';
 
   asamalar.forEach((a,i)=>{
-    const artis = Math.round(uretim * a.oran);
-    const f     = Math.round(giris + artis);
-    const pct   = Math.round(a.oran*100);
-    const bW    = Math.round((f/maxF)*100);
-    const renk  = i===asamalar.length-1?'#0d9488':'#b8860b';
+    const artis=Math.round(uretim*a.oran);
+    const f=Math.round(giris+artis);
+    const pct=Math.round(a.oran*100);
+    const bW=Math.round((f/maxF)*100);
+    const renk=i===asamalar.length-1?'#0d9488':'#b8860b';
     const tr=document.createElement('tr');
-    tr.innerHTML=`<td>${a.ad}</td><td>%${pct}</td><td style="color:var(--color-text-secondary);font-size:12px">${fmtTL(giris)} + ${fmtTL(artis)}</td><td class="r">${fmtTL(f)}</td>`;
+    tr.innerHTML=`<td>${a.ad}</td><td>%${pct}</td><td style="color:#64748b;font-size:12px">${fmtTL(giris)} + ${fmtTL(artis)}</td><td class="r">${fmtTL(f)}</td>`;
     tbody.appendChild(tr);
     const row=document.createElement('div');
     row.className='bar-row';
@@ -297,12 +275,11 @@ function hesapla(){
   });
 
   document.getElementById('r_dipnot').textContent=
-    `Toplam daire: ${toplam_daire} · Katılımcı: ${katilimci} · Daire başı net: ${db_em.toFixed(1)} m² · Birim maliyet: ${fmt(birim)} TL/m² · Üretim maliyeti: ${fmtTL(uretim)}`;
+    `Toplam daire: ${toplam_daire} · Taahhüt: ${taahhut} · Katılımcı: ${katilimci} · Daire başı: ${db_em.toFixed(1)} m² · Birim: ${fmt(birim)} TL/m² · Üretim: ${fmtTL(uretim)}`;
 }
 
 document.querySelectorAll('input,select').forEach(el=>el.addEventListener('input',hesapla));
 hesapla();
 </script>
-
 </body>
 </html>
